@@ -1,21 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pmelo-cl <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lucmunoz <lucmunoz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/12 11:55:07 by pmelo-cl          #+#    #+#             */
-/*   Updated: 2025/07/12 13:23:56 by lucmunoz         ###   ########.fr       */
+/*   Created: 2025/07/20 17:24:03 by lucmunoz          #+#    #+#             */
+/*   Updated: 2025/07/20 17:24:43 by lucmunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
-
-void	rush(int x, int y);
-
-int	main(void)
-{
-	rush (5, 5);
-	return (0);
-}
+#include <stdio.h>
