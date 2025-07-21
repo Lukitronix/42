@@ -1,4 +1,4 @@
-# Todo mi camino en la escuela 42
+# Todo mi camino en 42 Madrid
 
 Bienvenido a mi repositorio personal donde recopilo todo mi trabajo dentro del universo 42: desde los intensos días de la **Piscine** hasta los proyectos como estudiante oficial del programa.
 
