@@ -1,35 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
+/*   By: lucmunoz <lucmunoz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/11 22:34:05 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/07/21 20:39:50 by lucmunoz         ###   ########.fr       */
+/*   Created: 2025/07/12 16:32:49 by lucmunoz          #+#    #+#             */
+/*   Updated: 2025/07/12 16:36:42 by lucmunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
 
-void	ft_putnbr(int nb)
+void	ft_putstr(char *str)
 {
-	char	n;
-
-	if (nb == -2147483648)
+	while (*str != '\0')
 	{
-		write(1, "-2147483648", 11);
-		return ;
+		write(1, str, 1);
+		str++;
 	}
-	if (nb < 0)
-	{
-		write(1, "-", 1);
-		nb = -nb;
-	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-	}
-	n = (nb % 10) + '0';
-	write(1, &n, 1);
 }
