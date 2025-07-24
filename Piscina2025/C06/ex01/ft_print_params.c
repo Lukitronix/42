@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmunoz <lucmunoz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/23 18:51:17 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/07/24 15:58:20 by lucmunoz         ###   ########.fr       */
+/*   Created: 2025/07/24 15:59:37 by lucmunoz          #+#    #+#             */
+/*   Updated: 2025/07/24 16:05:23 by lucmunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
-int	main(int a, char **b)
+int	main(int argc, char **argv)
 {
 	int	i;
+	int	j;
 
-	(void)a;
-	i = 0;
-	while (b[0][i])
+	i = 1;
+	while (i < argc)
 	{
-		write(1, &b[0][i], 1);
+		j = 0;
+		while (argv[i][j])
+		{
+			write(1, &argv[i][j], 1);
+			j++;
+		}
+		write(1, "\n", 1);
 		i++;
 	}
-	write(1, "\n", 1);
 	return (0);
 }
