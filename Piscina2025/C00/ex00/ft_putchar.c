@@ -3,15 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucmunoz <lucmunoz@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 20:38:39 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/07/11 20:49:14 by lucmunoz         ###   ########.fr       */
+/*   Updated: 2025/07/25 21:59:21 by lukitronix       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+
 
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
+}
+
+int	main(void)
+{
+	ft_putcharq
 }
