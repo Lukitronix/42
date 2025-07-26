@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
+/*   By: lucmunoz <lucmunoz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 18:21:44 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/07/25 10:58:58 by lukitronix       ###   ########.fr       */
+/*   Updated: 2025/07/23 18:46:13 by lucmunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <stdio.h>
 
 int	ft_is_prime(int nb)
@@ -48,6 +47,6 @@ int	ft_find_next_prime(int nb)
 	printf("%d\n", ft_find_next_prime(1));
 	printf("%d\n", ft_find_next_prime(2));
 	printf("%d\n", ft_find_next_prime(5));
-	printf("%d\n", ft_find_next_prime(38));
+	printf("%d\n", ft_find_next_prime(49));
 	return (0);
 }*/

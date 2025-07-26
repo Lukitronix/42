@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmunoz <lucmunoz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/23 17:04:36 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/07/23 17:31:08 by lucmunoz         ###   ########.fr       */
+/*   Created: 2025/07/26 15:29:29 by lucmunoz          #+#    #+#             */
+/*   Updated: 2025/07/26 15:39:31 by lucmunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+#include <stdlib.h>
 
-int	ft_fibonacci(int index)
+int	ft_ultimate_range(int **range, int min, int max)
 {
-	if (index < 0)
-		return (-1);
-	if (index == 0)
+	int	i;
+	int	size;
+	int	*ranges;
+
+	i = 0;
+	size = max - min;
+	ranges = malloc(sizeof(int) * size);
+	if (min >= max)
+		*range = NULL;
 		return (0);
-	if (index == 1)
-		return (1);
-	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
+	if (!ranges)
+		return (-1);
+	while (i < size && ranges[i])
+	{
+		ranges[i] = min + i;
+		i++;
+	}
+	*range = ranges;
+	return (size);
 }
-
-/*int	main(void)
-{
-	printf("%d\n", ft_fibonacci(-1));
-	printf("%d\n", ft_fibonacci(0));
-	printf("%d\n", ft_fibonacci(1));
-	printf("%d\n", ft_fibonacci(3));
-	printf("%d\n", ft_fibonacci(10));
-
-}*/

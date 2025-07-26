@@ -6,7 +6,7 @@
 /*   By: lucmunoz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 12:57:04 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/07/26 14:14:33 by lucmunoz         ###   ########.fr       */
+/*   Updated: 2025/07/26 15:46:46 by lucmunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -65,13 +65,7 @@ char	*ft_read_dic(char *name)
 	return (text);
 }
 
-char	**ft_anls_dict(char *text)
-{
-	(void)text;
-	// analizar dicionario linea por linea
-	// devolvera un array de lneas (char **)
-	return (0);
-}
+char	**ft_anls_dict(char *text);
 
 char	**ft_send_dict(char *file)
 {
