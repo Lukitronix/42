@@ -1,51 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmunoz <lucmunoz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/24 18:51:45 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/07/26 12:09:10 by lucmunoz         ###   ########.fr       */
+/*   Created: 2025/07/26 12:09:54 by lucmunoz          #+#    #+#             */
+/*   Updated: 2025/07/26 12:19:53 by lucmunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
 #include <stdio.h>
 
-int	ft_strlen(char *str)
+int	*ft_range(int min, int max)
 {
 	int	i;
+	int	*range;
+	int	j;
 
 	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strdup(char *stc)
-{
-	int		i;
-	char	*copy;
-
-	copy = malloc(sizeof(char) * ft_strlen(stc));
-	if (copy == NULL)
-		return (NULL);
-	i = 0;
-	while (stc[i] != '\0')
+	j = max - min;
+	range = malloc(sizeof(int) * j);
+	if (min >= max)
+		return (0);
+	if (!range)
+		return (0);
+	while (i < j && range[i])
 	{
-		copy[i] = stc[i];
+		range[i] = min + i;
 		i++;
 	}
-	copy[i] = '\0';
-	return (copy);
+	return (range);
 }
-
-/*int	main(void)
-{
-	char source[] = "GeeksForGeeks";
-
-	char* target = ft_strdup(source);
-
-	printf("%s", target);
-	return (0);
-}*/

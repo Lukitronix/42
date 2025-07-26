@@ -1,51 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmunoz <lucmunoz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/24 18:51:45 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/07/26 12:09:10 by lucmunoz         ###   ########.fr       */
+/*   Created: 2025/07/23 18:51:17 by lucmunoz          #+#    #+#             */
+/*   Updated: 2025/07/24 15:58:20 by lucmunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
-#include <stdio.h>
+#include <unistd.h>
 
-int	ft_strlen(char *str)
+int	main(int a, char **b)
 {
 	int	i;
 
+	(void)a;
 	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strdup(char *stc)
-{
-	int		i;
-	char	*copy;
-
-	copy = malloc(sizeof(char) * ft_strlen(stc));
-	if (copy == NULL)
-		return (NULL);
-	i = 0;
-	while (stc[i] != '\0')
+	while (b[0][i])
 	{
-		copy[i] = stc[i];
+		write(1, &b[0][i], 1);
 		i++;
 	}
-	copy[i] = '\0';
-	return (copy);
-}
-
-/*int	main(void)
-{
-	char source[] = "GeeksForGeeks";
-
-	char* target = ft_strdup(source);
-
-	printf("%s", target);
+	write(1, "\n", 1);
 	return (0);
-}*/
+}
