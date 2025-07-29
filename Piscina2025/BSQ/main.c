@@ -6,7 +6,7 @@
 /*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 17:03:38 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/07/29 13:07:22 by lukitronix       ###   ########.fr       */
+/*   Updated: 2025/07/29 16:59:11 by lukitronix       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,23 @@
 #include <fcntl.h>
 #include <stdlib.h>
 
+void ft_putnbr(int n)
+{
+	char c;
+	if (n >= 10)
+		ft_putnbr(n / 10);
+	c = '0' + (n % 10);
+	write(1, &c, 1);
+}
+
 int	is_valid_map(t_map *map)
 {
 	int	i = 0;
-	int	col_count = 0;
 	int	current_cols = 0;
 
 	if (map->nb_rows <= 0 || map->cols <= 0)
 		return (0);
 
-	// Verificar que cada línea tenga la misma cantidad de columnas y caracteres válidos
 	while (map->raw[i])
 	{
 		current_cols = 0;

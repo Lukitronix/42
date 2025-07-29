@@ -6,7 +6,7 @@
 /*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 21:35:21 by lukitronix        #+#    #+#             */
-/*   Updated: 2025/07/28 21:35:30 by lukitronix       ###   ########.fr       */
+/*   Updated: 2025/07/29 16:53:23 by lukitronix       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int get_map_size(char *str)
 	return (i);
 }
 
-int count_columns(char *map_str, int nb_rows)
+int count_columns(char *map_str)
 {
 	int i = 0;
 	int cols = 0;
@@ -56,7 +56,7 @@ t_map *load_map_from_file(char *path)
 	while (read(fd, &map->raw[i], 1) > 0 && i < MAX_MAP_SIZE)
 		i++;
 	map->raw[i] = '\0';
-	map->cols = count_columns(map->raw, map->nb_rows);
+	map->cols = count_columns(map->raw);
 	close(fd);
 	return (map);
 }
@@ -80,7 +80,7 @@ t_map *load_map_from_stdin(void)
 	while (read(0, &map->raw[i], 1) > 0 && i < MAX_MAP_SIZE)
 		i++;
 	map->raw[i] = '\0';
-	map->cols = count_columns(map->raw, map->nb_rows);
+	map->cols = count_columns(map->raw);
 	return (map);
 }
 

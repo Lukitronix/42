@@ -21,6 +21,7 @@ t_map	*load_map_from_file(char *path);
 t_map	*load_map_from_stdin(void);
 int		parse_header(char *header, t_map *map);
 int		get_map_size(char *str);
-int		count_columns(char *map_str, int nb_rows);
+int		count_columns(char *map_str);
+int		ft_atoi(char *str);
 
 #endif
