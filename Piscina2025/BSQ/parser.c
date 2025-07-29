@@ -6,7 +6,7 @@
 /*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 21:35:21 by lukitronix        #+#    #+#             */
-/*   Updated: 2025/07/29 16:53:23 by lukitronix       ###   ########.fr       */
+/*   Updated: 2025/07/29 17:05:54 by lukitronix       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ int parse_header(char *header, t_map *map)
 		j++;
 	}
 	nb_line_str[j] = '\0';
-	map->nb_rows = atoi(nb_line_str);
+	map->nb_rows = ft_atoi(nb_line_str);
 	map->empty = header[i];
 	map->obstacle = header[i + 1];
 	map->full = header[i + 2];
