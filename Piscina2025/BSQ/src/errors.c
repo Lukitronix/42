@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucmunoz <lucmunoz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: paulasanz <paulasanz@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 18:24:14 by paulasanz         #+#    #+#             */
-/*   Updated: 2025/07/30 18:20:08 by lucmunoz         ###   ########.fr       */
+/*   Updated: 2025/07/30 15:40:59 by paulasanz        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,6 @@
 
 void	ft_errors(void)
 {
-	write(2, "Error\n", 6);
-	return ;
-}
-
-int	c()
-{
-	write(2, "map error\n", 10);
-	return (0);
+		write(2, "Error\n", 6);
+		return;
 }

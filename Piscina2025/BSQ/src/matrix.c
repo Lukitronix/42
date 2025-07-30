@@ -6,7 +6,7 @@
 /*   By: paulasanz <paulasanz@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 19:25:54 by paulasanz         #+#    #+#             */
-/*   Updated: 2025/07/30 17:47:51 by lucmunoz         ###   ########.fr       */
+/*   Updated: 2025/07/30 16:23:10 by paulasanz        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ int	fill_grid(char **grid, char *raw, int start, t_map *map)
 			k++;
 		}
 		grid[i][j] = '\0';
+		// if (raw[k] == '\0')
+		// 	return (0);
 		if (raw[k] == '\n')
 			k++;
 		i++;
@@ -65,3 +67,4 @@ char	**create_grid(t_map *map)
 		return (NULL);
 	return (grid);
 }
+

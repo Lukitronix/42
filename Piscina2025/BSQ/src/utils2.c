@@ -6,15 +6,13 @@
 /*   By: paulasanz <paulasanz@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 17:35:58 by lukitronix        #+#    #+#             */
-/*   Updated: 2025/07/30 18:00:08 by lucmunoz         ###   ########.fr       */
+/*   Updated: 2025/07/29 19:06:13 by paulasanz        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	get_map_size(char *str)
+int get_map_size(char *str)
 {
-	int	i;
-
-	i = 0;
+	int i = 0;
 	while (str[i] != '\0')
 		i++;
 	return (i);
