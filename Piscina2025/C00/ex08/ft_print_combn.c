@@ -3,41 +3,65 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_combn.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucmunoz <lucmunoz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 12:22:55 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/07/12 12:42:22 by lucmunoz         ###   ########.fr       */
+/*   Updated: 2025/07/30 20:25:16 by lukitronix       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	init_comb(char *comb, int n)
 {
-	write(1, &c, 1);
+	int	i ;
+
+	i = 0;
+	while (i < n)
+	{
+		comb[i] = '0' + i;
+		i++;
+	}
 }
 
-void	recursion(int n, int pos, int prev_digit)
+void	increment_comb(char *comb, int n)
 {
-	char	c;
-	int		digit;
+	int	i;
+	int	j;
 
-	digit = prev_digit + 1;
-	while (digit <= 9)
+	i = n - 1;
+	while (i >= 0 && comb[i] == '9' - (n - 1) + i)
+		i--;
+	if (i >= 0)
 	{
-		c = digit + '0';
-		ft_putchar(c);
-		if (pos < n - 1)
-			recursion(n, pos + 1, digit);
-		else if (digit != (10 - n + pos))
-			write(1, ", ", 1);
-		digit++;
+		comb[i]++;
+		j = i + 1;
+		while (j < n)
+		{
+			comb[j] = comb[j - 1] + 1;
+			j++;
+		}
 	}
+}
+
+int	is_last_comb(char *comb, int n)
+{
+	return (comb[0] == '9' - n + 1);
 }
 
 void	ft_print_combn(int n)
 {
-	if (n <= 0 || n >= 10)
+	char	comb[10];
+
+	if (n < 1 || n > 9)
 		return ;
-	recursion(n, 0, -1);
+	init_comb(comb, n);
+	while (1)
+	{
+		write(1, comb, n);
+		if (is_last_comb(comb, n))
+			break ;
+		write(1, ", ", 2);
+		increment_comb(comb, n);
+	}
 }
