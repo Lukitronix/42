@@ -1,17 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
+/*   By: paulasanz <paulasanz@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/20 14:54:55 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/07/29 17:02:51 by lukitronix       ###   ########.fr       */
+/*   Created: 2025/07/29 17:35:58 by lukitronix        #+#    #+#             */
+/*   Updated: 2025/07/29 19:06:13 by paulasanz        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+int get_map_size(char *str)
+{
+	int i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
 
 int	ft_isspace(char c)
 {
