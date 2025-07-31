@@ -1,13 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_memory.c                                  :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucmunoz <lucmunoz@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/14 20:19:03 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/07/14 20:37:54 by lucmunoz         ###   ########.fr       */
+/*   Created: 2025/07/11 22:34:05 by lucmunoz          #+#    #+#             */
+/*   Updated: 2025/07/31 11:47:41 by lucmunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
+void	ft_putnbr(int nb)
+{
+	char	n;
+
+	if (nb == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+		return ;
+	}
+	if (nb < 0)
+	{
+		write(1, "-", 1);
+		nb = -nb;
+	}
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10);
+	}
+	n = (nb % 10) + '0';
+	write(1, &n, 1);
+}

@@ -1,13 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_memory.c                                  :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucmunoz <lucmunoz@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: lucmunoz <lucmunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/14 20:19:03 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/07/14 20:37:54 by lucmunoz         ###   ########.fr       */
+/*   Created: 2025/07/14 17:41:16 by lucmunoz          #+#    #+#             */
+/*   Updated: 2025/07/14 18:11:26 by lucmunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
+int	ft_str_is_alpha(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (!(('A' <= str[i] && str[i] <= 'Z')
+				|| ('a' <= str[i] && str[i] <= 'z' )))
+			return (0);
+		i++;
+	}
+	return (1);
+}
