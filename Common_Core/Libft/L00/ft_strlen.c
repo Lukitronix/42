@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucmunoz <lucmunoz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 18:57:50 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/09/29 19:05:42 by lucmunoz         ###   ########.fr       */
+/*   Updated: 2025/09/30 11:09:31 by lukitronix       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(char *str)
+#include <stddef.h>
+
+size_t ft_strlen(const char *str)
 {
     int i;
 

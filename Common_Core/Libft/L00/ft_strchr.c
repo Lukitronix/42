@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 20:30:28 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/09/30 11:53:35 by lukitronix       ###   ########.fr       */
+/*   Created: 2025/09/30 12:00:51 by lukitronix        #+#    #+#             */
+/*   Updated: 2025/09/30 12:10:40 by lukitronix       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include <stdio.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t i;
-	size_t j;
-	size_t sl;
-	size_t dl;
+	int i;
 
 	i = 0;
-	j = 0;
-	sl = 0;
-	dl = 0;
-	while (dst[dl])
-		dl++;
-	while (src[sl])
-		sl++;
-	if (size <= dl)
-		return (size + sl);
-	i = dl;
-	while (src[j] && i < size - 1)
-		dst[i++] = src[j++];
-	dst[i] = '\0';
-	return (dl + sl);
+	while (s[i])
+	{
+		if (s[i] == (char)c)
+			return (char *)(s + i);
+		i++;
+	}
+	if (c == '\0')
+		return (char *)(s + i);
+	return NULL;
 }
