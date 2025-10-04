@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucmunoz <lucmunoz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 18:19:42 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/09/30 16:55:05 by lucmunoz         ###   ########.fr       */
+/*   Updated: 2025/10/01 17:14:35 by lukitronix       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int i)
+int	ft_isdigit(int c)
 {
-	return ('0' < i && '9' > i);
+	return ('0' <= c && '9' >= c);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucmunoz <lucmunoz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 19:33:54 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/09/30 16:55:26 by lucmunoz         ###   ########.fr       */
+/*   Updated: 2025/10/01 15:35:20 by lukitronix       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		u[i] = s[i];
 		i++;
 	}
-	reutrn (dest);
+	return (dest);
 }

@@ -6,11 +6,11 @@
 /*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 18:46:35 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/09/30 16:44:20 by lucmunoz         ###   ########.fr       */
+/*   Updated: 2025/10/01 17:20:10 by lukitronix       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(char c)
+int	ft_isascii(int c)
 {
-	return (0 < c && c > 127);
+	return (c >= 0 && c <= 127);
 }

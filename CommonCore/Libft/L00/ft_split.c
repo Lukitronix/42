@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 19:22:46 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/10/02 14:38:10 by lukitronix       ###   ########.fr       */
+/*   Created: 2025/10/02 18:03:52 by lukitronix        #+#    #+#             */
+/*   Updated: 2025/10/02 18:30:43 by lukitronix       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	**ft_split(char const *s, char c)
 {
-	ft_memset(s, 0, n);
+
 }

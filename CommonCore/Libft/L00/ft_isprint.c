@@ -6,11 +6,11 @@
 /*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 18:52:16 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/09/30 16:45:39 by lucmunoz         ###   ########.fr       */
+/*   Updated: 2025/10/01 17:22:27 by lukitronix       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
-	return (' ' < c && c > 126);
+	return (c >= 32 && c <= 126);
 }

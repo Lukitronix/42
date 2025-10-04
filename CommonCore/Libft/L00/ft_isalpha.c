@@ -6,11 +6,11 @@
 /*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 18:13:11 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/09/30 11:23:07 by lukitronix       ###   ########.fr       */
+/*   Updated: 2025/10/01 17:13:39 by lukitronix       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
-	return (('a' < c && 'z' > c) || ('A' < c && 'Z' > c));
+	return (('a' <= c && 'z' >= c) || ('A' <= c && 'Z' >= c));
 }
