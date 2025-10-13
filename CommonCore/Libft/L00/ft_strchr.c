@@ -6,7 +6,7 @@
 /*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 12:00:51 by lukitronix        #+#    #+#             */
-/*   Updated: 2025/10/02 17:25:20 by lukitronix       ###   ########.fr       */
+/*   Updated: 2025/10/13 21:56:15 by lukitronix       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strchr(const char *s, int c)
 	size_t	i;
 	size_t	len;
 
-	if (!s)
-		return (NULL);
 	len = ft_strlen(s);
 	i = 0;
 	while (i <= len)

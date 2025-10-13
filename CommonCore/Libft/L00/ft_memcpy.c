@@ -6,7 +6,7 @@
 /*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 19:33:54 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/10/01 15:35:20 by lukitronix       ###   ########.fr       */
+/*   Updated: 2025/10/13 21:15:45 by lukitronix       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char		*u;
 	const unsigned char	*s;
 
+	if (!dest && !src)
+		return (NULL);
 	i = 0;
 	u = (unsigned char *)dest;
 	s = (const unsigned char *)src;

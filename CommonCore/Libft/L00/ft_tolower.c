@@ -6,13 +6,13 @@
 /*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 12:00:02 by lukitronix        #+#    #+#             */
-/*   Updated: 2025/09/30 17:39:50 by lucmunoz         ###   ########.fr       */
+/*   Updated: 2025/10/13 20:12:24 by lukitronix       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
-	if (c >= 'a' && c <= 'z')
+	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
 	return (c);
 }

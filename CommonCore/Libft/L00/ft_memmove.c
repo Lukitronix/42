@@ -6,7 +6,7 @@
 /*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 19:52:37 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/10/01 17:38:09 by lukitronix       ###   ########.fr       */
+/*   Updated: 2025/10/13 22:17:43 by lukitronix       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 
 static void	copy_forward(unsigned char *d, const unsigned char *s, size_t n)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
+	while (n--)
 	{
-		d[i] = s[i];
-		i++;
+		*d = *s;
+		d++;
+		s++;
 	}
 }
 
@@ -35,6 +33,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char		*d;
 	const unsigned char	*s;
 
+	if (dest == src || n == 0)
+		return (dest);
 	if (!dest && !src)
 		return (NULL);
 	d = (unsigned char *)dest;

@@ -6,7 +6,7 @@
 /*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 12:07:38 by lukitronix        #+#    #+#             */
-/*   Updated: 2025/10/02 17:09:08 by lukitronix       ###   ########.fr       */
+/*   Updated: 2025/10/06 16:38:10 by lukitronix       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t	total_bytes;
-	void		*ptr;
+	void	*ptr;
 
 	if (nmemb == 0 || size == 0)
 		return (malloc(0));

@@ -6,7 +6,7 @@
 #    By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/01 12:47:21 by lukitronix        #+#    #+#              #
-#    Updated: 2025/10/01 15:33:07 by lukitronix       ###   ########.fr        #
+#    Updated: 2025/10/13 23:08:42 by lukitronix       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,8 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+bonus: all
 
 # **************************************************************************** #
 #                         Phony targets                                        #

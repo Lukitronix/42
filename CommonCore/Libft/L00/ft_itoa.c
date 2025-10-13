@@ -1,45 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/02 14:10:35 by lukitronix        #+#    #+#             */
-/*   Updated: 2025/10/06 16:40:31 by lukitronix       ###   ########.fr       */
+/*   Created: 2025/10/06 16:41:05 by lukitronix        #+#    #+#             */
+/*   Updated: 2025/10/13 19:33:27 by lukitronix       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	is_in_set(char c, const char *set)
+static int	ft_numlen(int n)
 {
-	size_t	i;
+	int	i;
 
-	i = 0;
-	while (set[i])
+	i = (n <= 0);
+	while (n)
 	{
-		if (set[i] == c)
-			return (1);
+		n /= 10;
 		i++;
 	}
-	return (0);
+	return (i);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_itoa(int n)
 {
-	size_t	start;
-	size_t	end;
+	int		i;
+	char	*res;
+	long	nb;
 
-	if (!s1 || !set)
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	i = ft_numlen(n);
+	res = malloc(sizeof(char) * (i + 1));
+	if (!res)
 		return (NULL);
-	start = 0;
-	while (s1[start] && is_in_set(s1[start], set))
-		start++;
-	end = ft_strlen(s1);
-	if (end)
-		end--;
-	while (end > start && is_in_set(s1[end], set))
-		end--;
-	return (ft_substr(s1, start, end - start + 1));
+	nb = n;
+	if (nb < 0)
+	{
+		res[0] = '-';
+		nb = -nb;
+	}
+	res[i--] = '\0';
+	while (nb > 0)
+	{
+		res[i--] = (nb % 10) + '0';
+		nb /= 10;
+	}
+	if (n == 0)
+		res[0] = '0';
+	return (res);
 }

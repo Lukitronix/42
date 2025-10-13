@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucmunoz <lucmunoz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 20:10:05 by lucmunoz          #+#    #+#             */
-/*   Updated: 2025/09/30 17:33:02 by lucmunoz         ###   ########.fr       */
+/*   Updated: 2025/10/13 21:55:27 by lukitronix       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 
-	if (!dst || !src)
-		return (0);
 	i = 0;
 	if (size != 0)
 	{
