@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lukitronix <lukitronix@student.42.fr>      +#+  +:+       +#+        */
+/*   By: lucmunoz <lucmunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 13:11:14 by lukitronix        #+#    #+#             */
-/*   Updated: 2025/10/17 13:11:16 by lukitronix       ###   ########.fr       */
+/*   Updated: 2025/10/20 19:57:40 by lucmunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_printf(char const *, ...)
+{
+
+}
